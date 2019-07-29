@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ReportActivity">
+
+    <RelativeLayout
+        android:id="@+id/layToolbarReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvNameApp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/overpass_semibold"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="reportar"
+            android:textColor="@color/colorGray"
+            android:textSize="20sp"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/layReturnReport"
+            android:layout_width="65dp"
+            android:layout_height="66dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ivMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="0dp"
+                android:contentDescription="@string/desc_menu_ic"
+                app:srcCompat="@drawable/ret_ic" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layOk"
+            android:layout_width="65dp"
+            android:layout_height="66dp"
+            android:visibility="visible"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/ivFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:layout_marginEnd="0dp"
+                app:srcCompat="@drawable/ok_th" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layCheckBlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layToolbarReport">
+
+        <LinearLayout
+            android:id="@+id/layMainBlockUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp">
+
+            <CheckBox
+                android:id="@+id/cbBlock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:fontFamily="@font/overpass"
+                android:text="Bloquear usuário"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- separador -->
+        <LinearLayout
+            android:id="@+id/separadorUm"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/layMainBlockUser"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="8dp"
+            android:background="@color/colorGrayBg"
+            android:gravity="center"
+            android:orientation="vertical">
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/radioGroupReport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/separadorUm"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/overpass"
+                android:text="motivo da denuncia" />
+
+            <RadioButton
+                android:id="@+id/radioOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/overpass"
+                android:text="não denunciar"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/radioTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/overpass"
+                android:text="imagens improprias"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/radioThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/overpass"
+                android:text="utilização de perfil copiado/fake"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/radioFour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/overpass"
+                android:text="venda ou propostas que infrigem a politica"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/radioFive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/overpass"
+                android:text="denunciar spam"
+                android:textSize="16sp" />
+
+        </RadioGroup>
+    </RelativeLayout>
+</RelativeLayout>

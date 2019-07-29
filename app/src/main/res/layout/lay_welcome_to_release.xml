@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvWelcomeNameRelease"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:gravity="center"
+        android:text="Bem vindo(a)!"
+        android:textColor="@color/colorGrayPage"
+        android:fontFamily="@font/overpass"
+        android:textSize="18sp"
+        />
+
+    <LinearLayout
+        android:id="@+id/layPersonCenter"
+        android:orientation="horizontal"
+        android:layout_below="@id/tvWelcomeNameRelease"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom|center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivProfileCenter"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:src="@drawable/menina_tw"
+                android:scaleType="centerCrop"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layImagesBottomRelease"
+        android:orientation="horizontal"
+        android:layout_below="@id/layPersonCenter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-60dp"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:layout_marginEnd="90dp"
+            android:background="@drawable/circle_bg">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivProfileOne"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ann"
+                android:scaleType="centerCrop"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:background="@drawable/circle_bg">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivProfileTwo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/menina_tes"
+                android:scaleType="centerCrop"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_below="@+id/layImagesBottomRelease"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:textSize="26sp"
+                android:fontFamily="@font/overpass"
+                android:textColor="@color/colorMain"
+                android:text="+"
+                />
+
+            <TextView
+                android:id="@+id/tvCounterActRelease"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:textSize="26sp"
+                android:fontFamily="@font/overpass"
+                android:textColor="@color/colorGrayPage"
+                android:text="500 novos matches"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:textSize="11sp"
+            android:fontFamily="@font/overpass"
+            android:textColor="@color/colorGrayMin"
+            android:text="previsão de lançamento 21/10/19"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:fontFamily="@font/overpass"
+            android:textColor="@color/colorGrayPage"
+            android:text="essa é a versão beta do nosso app. seu cadastro e de mais outros matches estão salvos e teremos a contagem deles acima até o lançamento."
+            />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cvAcessBangu"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginTop="18dp"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@drawable/bg_btn">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorWhite"
+                    android:fontFamily="@font/overpass"
+                    android:text="acessar bangu ao vivo no app"
+                    />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+</RelativeLayout>

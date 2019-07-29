@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    android:id="@+id/layContentLogin"
+    android:background="@color/colorWhite"
+    tools:context="br.com.bangu_ao_vivo.bangu.Activity.LoginActivity">
+
+    <RelativeLayout
+        android:id="@+id/layFailedConnection"
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvOps"
+            android:layout_below="@+id/ivNotConn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:fontFamily="@font/overpass"
+            android:textSize="18sp"
+            android:textColor="@color/colorGrayPage"
+            android:text="Ooops! Tivemos um problema, verifique sua conexão."
+            />
+
+        <TextView
+            android:id="@+id/tvTentarNovamente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?selectableItemBackgroundBorderless"
+            android:textColor="@color/colorMain"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/tvOps"
+            android:gravity="center"
+            android:fontFamily="@font/overpass"
+            android:text="@string/lbl_tentar"
+            android:textSize="16sp"
+            />
+
+        <ImageView
+            android:id="@+id/ivNotConn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_connect" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layMain"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <!-- Toolbar e titulo -->
+    <RelativeLayout
+        android:id="@+id/lay_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.shuhart.stepview.StepView
+            android:id="@+id/step_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:padding="10dp"
+            app:sv_selectedCircleColor="@color/colorMain"
+            app:sv_selectedTextColor="@color/colorWhite"
+            app:sv_stepLineWidth="1dp"
+            app:sv_stepPadding="4dp"
+            app:sv_nextTextColor="@color/colorGray"
+            app:sv_nextStepLineColor="@color/colorMain"
+            app:sv_doneCircleColor="@color/colorGray"
+            app:sv_doneStepLineColor="@color/colorGray"
+            app:sv_doneCircleRadius="12dp"
+            app:sv_selectedCircleRadius="12dp"
+            app:sv_selectedStepNumberColor="@color/colorWhite"
+            app:sv_stepViewStyle="@style/StepView"
+            app:sv_doneStepMarkColor="@color/colorPrimary"
+            app:sv_stepNumberTextSize="12sp"
+            app:sv_animationType="Line"
+            app:sv_typeface="@font/overpass"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="65dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Teto de bem vindo -->
+            <RelativeLayout
+                android:id="@+id/lay_welcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/tv_welcome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="40dp"
+                    android:fontFamily="@font/overpass"
+                    android:text="@string/txt_welcome"
+                    android:textColor="@color/colorGray"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+            <!-- layout de sexo do usuario -->
+            <RelativeLayout
+                android:id="@+id/lay_sex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lay_welcome"
+                android:layout_alignParentStart="true"
+                android:visibility="gone">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cv_homem"
+                    android:layout_width="100dp"
+                    android:layout_height="37dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    android:backgroundTint="@android:color/transparent"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:id="@+id/sw_Homem"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvHomem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/overpass"
+                            android:gravity="left"
+                            android:text="@string/lbl_homem"
+                            android:textColor="@color/colorMain"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:id="@+id/lay_homem"
+                            android:layout_width="40dp"
+                            android:layout_height="1.2dp"
+                            android:layout_marginTop="3dp"
+                            android:background="@color/colorMain"
+                            android:gravity="left"
+                            android:orientation="vertical"
+                            android:visibility="visible"></LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="100dp"
+                    android:layout_height="37dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toEndOf="@+id/cv_homem"
+                    android:backgroundTint="@android:color/transparent"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:id="@+id/sw_Mulher"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvMulher"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/overpass"
+                            android:gravity="left"
+                            android:text="@string/lbl_mulher"
+                            android:textColor="@color/colorMain"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:id="@+id/lay_mulher"
+                            android:layout_width="40dp"
+                            android:layout_height="1.2dp"
+                            android:layout_marginTop="3dp"
+                            android:background="@color/colorMain"
+                            android:gravity="left"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
+
+            <!-- layout de input -->
+            <RelativeLayout
+                android:id="@+id/lay_input"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/lay_sex"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="5dp"
+                android:visibility="visible">
+
+                <!-- Edt name  -->
+                <EditText
+                    android:id="@+id/edt_nome"
+                    style="@style/EditText.login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/overpass"
+                    android:hint="@string/hint_nome"
+                    android:textColor="@color/colorGray"
+                    android:textSize="17sp" />
+
+                <!-- Edt email -->
+                <EditText
+                    android:id="@+id/edt_email"
+                    style="@style/EditText.login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edt_nome"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/overpass"
+                    android:hint="@string/hint_email"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/colorGray"
+                    android:textSize="17sp" />
+
+
+                <!-- Button -->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cv_cadastrar"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:layout_below="@+id/edt_email"
+                    android:layout_alignStart="@+id/edt_nome"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="30dp"
+                    android:backgroundTint="@color/colorMain"
+                    app:cardCornerRadius="3dp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_btn"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/overpass"
+                            android:gravity="center"
+                            android:text="@string/lbl_cadastrar"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <!-- organizador de views (separador) -->
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="1.5dp"
+                    android:layout_below="@+id/cv_cadastrar"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="13dp"
+                    android:background="@color/colorGrayGo"
+                    android:gravity="center"></LinearLayout>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cv_cadastrar_fcb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cv_cadastrar"
+                    android:layout_alignStart="@+id/cv_cadastrar"
+                    android:layout_marginTop="28dp"
+                    android:layout_marginEnd="30dp"
+                    android:backgroundTint="@color/colorWhite"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                    <com.facebook.login.widget.LoginButton
+                        android:id="@+id/login_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp" />
+
+                        <com.google.android.gms.common.SignInButton
+                            android:id="@+id/sign_in_button"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:layout_height="40dp" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cv_cadastrar_google"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_below="@+id/cv_cadastrar_fcb"
+                    android:layout_alignStart="@+id/cv_cadastrar_fcb"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="30dp"
+                    android:backgroundTint="@color/colorWhite"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/shape_cv_midias_goo"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignStart="@+id/cv_cadastrar"
+                            android:layout_alignTop="@+id/cv_cadastrar"
+                            android:fontFamily="@font/overpass"
+                            android:gravity="center"
+                            android:text="@string/lbl_entrar"
+                            android:textColor="@color/colorGrayMin" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <!-- Text information name -->
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edt_nome"
+                    android:layout_alignStart="@+id/edt_nome"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/overpass"
+                    android:text="@string/txt_aviso_nome"
+                    android:textColor="@color/colorMain"
+                    android:textSize="10sp" />
+
+                <!-- Text terms -->
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cv_cadastrar_google"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="60dp"
+                    android:layout_marginBottom="30dp"
+                    android:fontFamily="@font/overpass"
+                    android:gravity="center"
+                    android:text="suas informações estarão protegidas, nossa politica define a privacidade como foco."
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+
+            <!-- Change image profile -->
+            <RelativeLayout
+                android:id="@+id/layChangeProf"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <include layout="@layout/lay_change_prof" />
+            </RelativeLayout>
+
+            <!-- More inputs -->
+            <RelativeLayout
+                android:id="@+id/lay_input_more"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <!-- Edt passowrd -->
+                <EditText
+                    android:id="@+id/edt_senha"
+                    style="@style/EditText.login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/overpass"
+                    android:hint="@string/hint_senha"
+                    android:inputType="textPassword"
+                    android:textColor="@color/colorGray"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/edt_senha"
+                    android:layout_alignStart="@id/edt_senha"
+                    android:fontFamily="@font/overpass"
+                    android:text="Mínimo de 6 digitos"
+                    android:textColor="@color/colorMain"
+                    android:textSize="10sp"
+                    />
+
+                <!-- Card idade or age -->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cv_nascimento"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edt_senha"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="30dp"
+                    android:backgroundTint="@color/colorWhite"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:id="@+id/tvLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvAge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginStart="0dp"
+                            android:fontFamily="@font/overpass"
+                            android:gravity="center|left"
+                            android:text="23/04/1999"
+                            android:textColor="@color/colorGrayMin" />
+
+                        <TextView
+                            android:id="@+id/tvLabelData"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:fontFamily="@font/overpass"
+                            android:text="Data de nascimento"
+                            android:textColor="@color/colorMain"
+                            android:textSize="10sp" />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <!-- edt localidade -->
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cvProximo"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:layout_below="@+id/cv_nascimento"
+                    android:layout_alignStart="@+id/edt_senha"
+                    android:layout_alignEnd="@+id/edt_senha"
+                    android:layout_marginTop="14dp"
+                    app:cardCornerRadius="3dp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignStart="@+id/cvProximo"
+                        android:background="@drawable/bg_btn"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/overpass"
+                            android:gravity="center"
+                            android:text="proximo"
+                            android:textColor="@color/colorWhite" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

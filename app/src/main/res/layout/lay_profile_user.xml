@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <!-- controler layouts -->
+    <RelativeLayout
+        android:id="@+id/lay_controler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/layReturnBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="0dp">
+
+            <ImageView
+                android:id="@+id/ivReturnProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="15dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:srcCompat="@drawable/ret_ic" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <!-- body profile image and header -->
+            <LinearLayout
+                android:id="@+id/lay_change_user_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="155dp"
+                    android:layout_height="155dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="55dp">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivUserProfileImage"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@null" >
+                </de.hdodenhof.circleimageview.CircleImageView>
+
+                <LinearLayout
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_gravity="top|end"
+                    android:background="@drawable/bg_circle_con">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/camera_ic"
+                        />
+
+                </LinearLayout>
+                </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/overpass"
+                    android:gravity="center"
+                    android:text="@string/lbl_change_image"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- body profile settings extra -->
+            <LinearLayout
+                android:id="@+id/layProfileExtra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lay_change_user_profile"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvNameUserProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:fontFamily="@font/overpass"
+                        android:text=""
+                        android:textColor="@color/colorGrayPage"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/ivVerify"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/evn"
+                        />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvDescProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="4"
+                    android:ellipsize="end"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="40dp"
+                    android:fontFamily="@font/overpass_light"
+                    android:text="gosto de sair com meus amigos e tambem de conhecer pessoas aleatorias durante as viagens que faço para o lugar onde eu trabalho rs."
+                    android:textColor="@color/colorGray"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:id="@+id/layEditProfile"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/shape_edit_profile"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/overpass"
+                        android:gravity="center|left"
+                        android:text="@string/tlt_editar"
+                        android:textColor="@color/colorMain" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- separador -->
+            <LinearLayout
+                android:id="@+id/separadorUm"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/layProfileExtra"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="30dp"
+                android:background="@color/colorGrayBg"
+                android:gravity="center"
+                android:orientation="vertical"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layProfileDicas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/separadorUm"
+                android:layout_marginTop="18dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvProfileDicas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:fontFamily="@font/overpass"
+                    android:text="Dicas de perfil"
+                    android:textColor="@color/colorGrayPage"
+                    android:textSize="18sp" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/cvOne"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:layout_marginStart="25dp"
+                            android:layout_marginEnd="20dp"
+                            android:backgroundTint="@color/colorWhite"
+                            app:cardElevation="13dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="3dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="50dp"
+                                    android:layout_marginBottom="50dp"
+                                    android:background="@color/colorMain"></LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tvCardTextOne"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="15dp"
+                                        android:layout_marginEnd="15dp"
+                                        android:fontFamily="@font/overpass"
+                                        android:maxLines="5"
+                                        android:ellipsize="end"
+                                        android:text="Publicar fotos de viagens ajuda com pessoas em fase de auto descoberta e com desejos de novas conexões"
+                                        android:textColor="@color/colorGray"
+                                        android:textSize="16sp" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="0dp"
+                                        android:layout_marginEnd="0dp"
+                                        android:fontFamily="@font/overpass"
+                                        android:gravity="center"
+                                        android:text="ver mais"
+                                        android:textColor="@color/colorGrayBg"
+                                        android:textSize="13sp" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/cvTwo"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:layout_marginEnd="20dp"
+                            android:backgroundTint="@color/colorWhite"
+                            app:cardElevation="13dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="3dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="50dp"
+                                    android:layout_marginBottom="50dp"
+                                    android:background="@color/colorMain"></LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tvCardTextTwo"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:maxLines="5"
+                                        android:ellipsize="end"
+                                        android:layout_marginStart="15dp"
+                                        android:layout_marginEnd="15dp"
+                                        android:fontFamily="@font/overpass"
+                                        android:text="Publicar fotos de viagens ajuda com pessoas em fase de auto descoberta e com desejos de novas conexões"
+                                        android:textColor="@color/colorGray"
+                                        android:textSize="16sp" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="0dp"
+                                        android:layout_marginEnd="0dp"
+                                        android:fontFamily="@font/overpass"
+                                        android:gravity="center"
+                                        android:text="ver mais"
+                                        android:textColor="@color/colorGrayBg"
+                                        android:textSize="13sp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/cvThree"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:layout_marginEnd="30dp"
+                            android:backgroundTint="@color/colorWhite"
+                            app:cardElevation="13dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="3dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="50dp"
+                                    android:layout_marginBottom="50dp"
+                                    android:background="@color/colorMain"></LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tvCardTextThree"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:maxLines="5"
+                                        android:ellipsize="end"
+                                        android:layout_marginStart="15dp"
+                                        android:layout_marginEnd="15dp"
+                                        android:fontFamily="@font/overpass"
+                                        android:text="Publicar fotos de viagens ajuda com pessoas em fase de auto descoberta e com desejos de novas conexões"
+                                        android:textColor="@color/colorGray"
+                                        android:textSize="16sp" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="0dp"
+                                        android:layout_marginEnd="0dp"
+                                        android:fontFamily="@font/overpass"
+                                        android:gravity="center"
+                                        android:text="ver mais"
+                                        android:textColor="@color/colorGrayBg"
+                                        android:textSize="13sp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <!-- separador -->
+            <LinearLayout
+                android:id="@+id/separadorDois"
+                android:layout_width="200dp"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/layProfileDicas"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="18dp"
+                android:background="@color/colorWhite"
+                android:gravity="center"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <include
+                android:id="@+id/include"
+                layout="@layout/lay_verification_user"
+                android:layout_below="@id/separadorDois"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:id="@+id/layGallery"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_below="@+id/include"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center|start"
+                android:padding="20dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/gallery_user"
+                    />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:gravity="center|start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxWidth="200dp"
+                        android:textColor="@color/colorGrayPage"
+                        android:fontFamily="@font/overpass_semibold"
+                        android:textSize="25sp"
+                        android:text="Minha Galeria de fotos."
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorGray"
+                        android:fontFamily="@font/overpass"
+                        android:textSize="15sp"
+                        android:text="Todas as imagens do perfil."
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- separador -->
+            <LinearLayout
+                android:id="@+id/separadorTres"
+                android:layout_width="200dp"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/layGallery"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorGrayBg"
+                android:gravity="center"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/separadorTres"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvProfilePreferencias"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    android:fontFamily="@font/overpass"
+                    android:text="Preferências e mais"
+                    android:textColor="@color/colorGrayPage"
+                    android:textSize="18sp" />
+
+
+                <TextView
+                    android:id="@+id/tvProfileNotfy"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="0dp"
+                    android:fontFamily="@font/overpass"
+                    android:gravity="center|left"
+                    android:text="Notificações"
+                    android:textColor="@color/colorGrayMin"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvProfileBlackList"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:visibility="gone"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="0dp"
+                    android:fontFamily="@font/overpass"
+                    android:gravity="center|left"
+                    android:text="Lista negra"
+                    android:textColor="@color/colorGrayMin"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvProfilePolitica"
+                    android:layout_width="match_parent"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="0dp"
+                    android:fontFamily="@font/overpass"
+                    android:gravity="center|left"
+                    android:text="Politica de privacidade"
+                    android:textColor="@color/colorGrayMin"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvProfileSobre"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="0dp"
+                    android:fontFamily="@font/overpass"
+                    android:gravity="center|left"
+                    android:text="Favoritos"
+                    android:textColor="@color/colorGrayMin"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tvProfileSair"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="0dp"
+                    android:fontFamily="@font/overpass"
+                    android:gravity="center|left"
+                    android:text="Sair"
+                    android:textColor="@color/colorMain"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

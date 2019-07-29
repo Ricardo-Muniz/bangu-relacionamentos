@@ -1,0 +1,87 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorGrayBg</item>
+        <item name="colorAccent">@color/colorMain</item>
+    </style>
+
+    <style name="EditText.login" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/colorGrayMin</item>
+        <item name="colorControlActivated">@color/colorMain</item>
+        <item name="colorControlHighlight">@color/colorMain</item>
+        <item name="android:textColorHint">@color/colorGrayMin</item>
+    </style>
+
+    <style name="Mytheme" parent="Theme.AppCompat">
+       <item name="android:windowBackground">@color/colorWhite</item>
+    </style>
+
+
+    <!-- Base application theme. -->
+    <style name="AppThemeDark" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorGrayBg</item>
+        <item name="colorAccent">@color/colorMain</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppThemeCustomize" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorMain</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+
+    <style name="ToolTipLayoutCustomStyle">
+        <item name="ttlm_padding">20dip</item>
+        <item name="ttlm_backgroundColor">@color/colorSecondari</item>
+        <item name="ttlm_strokeWeight">1dip</item>
+        <item name="ttlm_cornerRadius">5dip</item>
+        <item name="ttlm_overlayStyle">@style/ToolTipOverlayCustomStyle</item>
+        <item name="android:textAppearance">@style/ToolTipTextStyle</item>
+    </style>
+
+    <style name="ToolTipTextStyle">
+        <item name="android:fontFamily">@font/overpass</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="ToolTipOverlayCustomStyle">
+        <item name="android:color">@color/colorSecondari</item>
+        <item name="ttlm_repeatCount">1</item>
+        <item name="ttlm_duration">4000</item>
+        <item name="android:alpha">0.2</item>
+        <item name="android:layout_margin">8dp</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppThemeCustomizeDetails" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorSecondari</item>
+        <item name="colorAccent">@color/colorMain</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppThemeCustomizeGallery" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimaryDark">@color/colorSecondari</item>
+        <item name="colorPrimary">@color/colorSecondari</item>
+        <item name="colorAccent">@color/colorMain</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppThemeCustomizeMasterDetail" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorAccent">@color/colorMain</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+</resources>

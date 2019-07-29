@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvTotal"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp"
+        android:background="@drawable/shape_lay_card">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/menina"
+                android:scaleType="centerCrop"
+                android:id="@+id/ivUser" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="60dp"
+                app:cardElevation="0.5dp"
+                app:cardCornerRadius="10dp"
+                android:backgroundTint="@color/colorWhite"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="181dp">
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvNameAge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="Aninha, 19"
+                        android:fontFamily="@font/overpass"
+                        android:textSize="20sp"
+                        />
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvFlert"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_below="@+id/ivUser"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="56dp"
+                android:fontFamily="@font/overpass"
+                android:textColor="@color/colorMain"
+                android:textSize="18sp"
+                android:text="Flertar agora"
+                tools:ignore="NewApi" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:gravity="center"
+                android:layout_below="@+id/tvFlert"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/overpass"
+                android:textColor="@color/colorGrayMin"
+                android:text="O usuario vai receber o flerte, se ele aceitar voces ja podem conversar." />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

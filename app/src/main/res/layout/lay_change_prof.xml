@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <!-- Toolbar e titulo -->
+    <RelativeLayout
+        android:id="@+id/lay_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/overpass_semibold"
+            android:gravity="center"
+            android:padding="0dp"
+            android:text=""
+            android:textColor="@color/colorMain"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/lay_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/lay_change_image">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/cvProfile"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginTop="0dp"
+            android:src="@drawable/change_prof"
+            tools:ignore="VectorDrawableCompat" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/lay_change_image">
+
+        <TextView
+            android:id="@+id/tvMudar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/overpass"
+            android:text="Ricardo, você precisa ficar mais apresentavel, use um perfil."
+            android:textColor="@color/colorGray"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvHow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvMudar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/overpass_light"
+            android:text="perfil > foto > galeria" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvHow"
+            android:layout_marginEnd="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/overpass"
+            android:gravity="center"
+            android:text="Se não gostar da foto depois você pode mudar"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/lay"
+            android:layout_below="@id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/layConclud"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/colorMain"
+                    android:fontFamily="@font/overpass"
+                    android:text="Concluir" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvFinalizar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:gravity="right"
+            android:padding="18dp"
+            android:fontFamily="@font/overpass_semibold"
+            android:textColor="@color/colorGray"
+            android:text="Finalizar"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

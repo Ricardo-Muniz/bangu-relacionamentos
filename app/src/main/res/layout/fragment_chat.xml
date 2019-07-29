@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.DisplayChatFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:layout_marginStart="15dp"
+        android:padding="0dp">
+        <TextView
+            android:id="@+id/tvConversas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:fontFamily="@font/overpass_semibold"
+            android:textColor="@color/colorGrayPage"
+            android:textSize="18sp"
+            android:text="conversas"
+            />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_display_chat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="60dp">
+    </android.support.v7.widget.RecyclerView>
+
+    <include
+        android:id="@+id/includeChat"
+        layout="@layout/lay_empty_chat"
+        android:visibility="gone" />
+
+</FrameLayout>

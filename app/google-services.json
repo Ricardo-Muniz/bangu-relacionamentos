@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "685823849158",
+    "firebase_url": "https://storagebangu.firebaseio.com",
+    "project_id": "storagebangu",
+    "storage_bucket": "storagebangu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:685823849158:android:496c3d76deeed31f",
+        "android_client_info": {
+          "package_name": "br.com.bangu_ao_vivo.bangu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "685823849158-1m707cttstei1nmk3g05f5n68tb16se4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.bangu_ao_vivo.bangu",
+            "certificate_hash": "c39ad55f727c84e20a48372620c6bc8c3e72799e"
+          }
+        },
+        {
+          "client_id": "685823849158-kplkuuk8pa6tgo4b84lid48ld5v8rc7d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDM4fRrlhj7EEGP1TbM-96M-asNXB4jX-8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "685823849158-kplkuuk8pa6tgo4b84lid48ld5v8rc7d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

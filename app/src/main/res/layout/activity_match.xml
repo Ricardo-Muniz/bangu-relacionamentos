@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_tw"
+    android:gravity="center"
+    tools:context=".Activity.MatchActivity">
+
+
+    <LinearLayout
+        android:id="@+id/layPersonCenter"
+        android:orientation="horizontal"
+        android:layout_below="@id/tvWelcomeNameRelease"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom|center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivProfileCenter"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:src="@null"
+                android:scaleType="centerCrop"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layImagesBottomRelease"
+        android:orientation="horizontal"
+        android:layout_below="@id/layPersonCenter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-60dp"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:layout_marginEnd="130dp"
+            android:background="@drawable/circle_bg">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivProfileOne"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@null"
+                android:scaleType="centerCrop"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/layImagesBottomRelease"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/tvNamesMatch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/overpass"
+        android:text=""
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textColor="@color/colorWhite"
+        />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/overpass_light"
+            android:text="Podem conversar, clicando no botão abaixo e mandando sua mensagem."
+            android:textSize="17sp"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cvMessageMatch"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginStart="25dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:cardElevation="0dp"
+            android:backgroundTint="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_match_btn"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:fontFamily="@font/overpass"
+                    android:textColor="@color/colorWhite"
+                    android:text="conversar"
+                    />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</RelativeLayout>

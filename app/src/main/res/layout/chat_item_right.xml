@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/layMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+        android:layout_marginStart="15dp"
+        android:gravity="center"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/shape_chat_message">
+        <TextView
+            android:id="@+id/tvMessageUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/overpass_light"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            android:text="Oi, lindo como voce esta?"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/overpass_light"
+        android:textSize="10sp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/layMessage"
+        android:id="@+id/txt_seen"
+        />
+
+</RelativeLayout>

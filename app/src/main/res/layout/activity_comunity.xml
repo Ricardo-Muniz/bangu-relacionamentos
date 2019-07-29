@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="br.com.bangu_ao_vivo.bangu.ComunityActivity">
+
+    <RelativeLayout
+        android:id="@+id/layFailedConnection"
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvOps"
+            android:layout_below="@+id/ivNotConn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:fontFamily="@font/overpass"
+            android:textSize="18sp"
+            android:textColor="@color/colorGrayPage"
+            android:text="Ooops! Tivemos um problema, verifique sua conexão."
+            />
+
+        <TextView
+            android:id="@+id/tvTentarNovamente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?selectableItemBackgroundBorderless"
+            android:textColor="@color/colorMain"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/tvOps"
+            android:gravity="center"
+            android:fontFamily="@font/overpass"
+            android:text="@string/lbl_tentar"
+            android:textSize="16sp"
+            />
+
+        <ImageView
+            android:id="@+id/ivNotConn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_connect" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/layMenu"
+            android:layout_width="65dp"
+            android:layout_height="66dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/ivMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:layout_marginStart="0dp"
+                android:contentDescription="@string/desc_menu_ic"
+                app:srcCompat="@drawable/hmbr_bangu_ic" />
+            <ImageView
+                android:id="@+id/ivLikess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:layout_gravity="center"
+                android:layout_marginStart="3dp"
+                android:contentDescription="@string/desc_menu_ic"
+                app:srcCompat="@drawable/heart_ic" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="65dp"
+            android:layout_height="66dp"
+            android:visibility="visible"
+            android:layout_centerHorizontal="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:layout_marginEnd="0dp"
+                app:srcCompat="@drawable/logo_ban" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layFilter"
+            android:layout_width="65dp"
+            android:layout_height="66dp"
+            android:visibility="visible"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center">
+        <ImageView
+            android:id="@+id/ivFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_marginEnd="0dp"
+            app:srcCompat="@drawable/filtr_comunity_ic" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:visibility="visible"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:labelVisibilityMode="unlabeled"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:backgroundTint="@color/colorWhite"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/navigation" />
+</android.support.constraint.ConstraintLayout>

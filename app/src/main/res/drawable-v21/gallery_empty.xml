@@ -1,0 +1,41 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:viewportWidth="200"
+    android:viewportHeight="200"
+    android:width="100dp"
+    android:height="100dp">
+    <path
+        android:pathData="M166.42 49.399c3.313 -0.004 6.004 2.677 6.01 5.991l0.124 79.5c0.006 3.313 -2.678 6.005 -5.992 6.01l-139.999 0.219c-3.313 0.005 -6.004 -2.677 -6.01 -5.99l-0.124 -79.5c-0.005 -3.313 2.677 -6.004 5.99 -6.009L166.42 49.399z"
+        android:strokeColor="@color/colorGrayMin"
+        android:strokeWidth="3"
+        android:strokeMiterLimit="10" />
+    <path
+        android:pathData="M177.438 60.882c3.313 -0.004 6.003 2.677 6.009 5.991l0.124 79.5c0.005 3.313 -2.677 6.003 -5.991 6.009l-139.999 0.219c-3.314 0.006 -6.005 -2.678 -6.01 -5.991L31.447 67.11c-0.005 -3.314 2.677 -6.004 5.99 -6.009L177.438 60.882z"
+        android:fillColor="#FFFFFF"
+        android:strokeColor="@color/colorGrayMin"
+        android:strokeWidth="3"
+        android:strokeMiterLimit="10" />
+    <path
+        android:pathData="M31.523 116.001c0 0 29.977 -25.001 70.977 2.499s81.018 -6.453 81.018 -6.453"
+        android:fillColor="#FFFFFF"
+        android:strokeColor="@color/colorGrayMin"
+        android:strokeWidth="3"
+        android:strokeMiterLimit="10" />
+    <path
+        android:pathData="M102.5 118.5c0 0 22.858 -35.5 81.013 -9.5"
+        android:fillColor="#FFFFFF"
+        android:strokeColor="@color/colorGrayMin"
+        android:strokeWidth="3"
+        android:strokeMiterLimit="10" />
+    <path
+        android:pathData="M52.334 83.167A6.167 6.167 0 0 1 40 83.167A6.167 6.167 0 0 1 52.334 83.167Z"
+        android:fillColor="#FFFFFF"
+        android:strokeColor="@color/colorGrayMin"
+        android:strokeWidth="3"
+        android:strokeMiterLimit="10" />
+    <path
+        android:pathData="M103.629 103.051A3.792 3.792 0 0 1 96.045 103.051A3.792 3.792 0 0 1 103.629 103.051Z"
+        android:fillColor="#FFFFFF"
+        android:strokeColor="@color/colorGrayMin"
+        android:strokeWidth="3"
+        android:strokeMiterLimit="10" />
+</vector>

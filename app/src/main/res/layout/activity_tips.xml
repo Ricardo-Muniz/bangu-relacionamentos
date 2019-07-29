@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".Activity.TipsActivity">
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_marginBottom="0dp">
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+           <android.support.v7.widget.CardView
+               android:id="@+id/cvTipsImage"
+               android:layout_width="match_parent"
+               android:layout_height="350dp"
+               app:cardCornerRadius="0dp"
+               app:cardElevation="0dp"
+               android:layout_marginStart="0dp"
+               android:layout_marginEnd="0dp"
+               android:layout_marginTop="0dp">
+
+               <RelativeLayout
+                   android:fitsSystemWindows="true"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent">
+
+                   <ImageView
+                       android:id="@+id/ivBackgorundTips"
+                       android:fitsSystemWindows="true"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:src="@drawable/food"
+                       android:scaleType="centerCrop"
+                       />
+
+                   <View
+                       android:layout_width="match_parent"
+                       android:layout_height="300dp"
+                       android:background="@drawable/gradient"
+                       android:layout_alignParentBottom="true"
+                       />
+
+                   <de.hdodenhof.circleimageview.CircleImageView
+                       android:id="@+id/ivEditorProfileTips"
+                       android:layout_width="40dp"
+                       android:layout_height="40dp"
+                       android:layout_alignParentBottom="true"
+                       android:layout_marginBottom="20dp"
+                       android:layout_marginStart="20dp"
+                       android:src="@drawable/ann"
+                       />
+
+                   <TextView
+                       android:id="@+id/tvNameEditorTips"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentBottom="true"
+                       android:layout_marginBottom="34dp"
+                       android:layout_marginStart="70dp"
+                       android:text="Marcos"
+                       android:fontFamily="@font/overpass_semibold"
+                       android:textColor="@color/colorWhite"
+                       android:textSize="18sp"
+                       />
+
+                   <TextView
+                       android:id="@+id/tvWeekTips"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentBottom="true"
+                       android:layout_marginBottom="20dp"
+                       android:layout_marginStart="70dp"
+                       android:text="ontem"
+                       android:fontFamily="@font/overpass"
+                       android:textColor="@color/colorGrayBg"
+                       android:textSize="11sp"
+                       />
+
+
+                   <android.support.v7.widget.CardView
+                       android:layout_width="180dp"
+                       android:layout_height="80dp"
+                       android:layout_marginStart="20dp"
+                       android:layout_marginTop="20dp"
+                       app:cardElevation="20dp">
+
+                       <LinearLayout
+                           android:orientation="vertical"
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:gravity="center|start">
+                           <TextView
+                               android:id="@+id/tvTitleTopTips"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_marginStart="20dp"
+                               android:layout_marginTop="0dp"
+                               android:fontFamily="@font/overpass_semibold"
+                               android:textColor="@color/colorMain"
+                               android:textSize="20sp"
+                               android:text="Viajantes"
+                               />
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_marginStart="20dp"
+                               android:layout_marginTop="0dp"
+                               android:fontFamily="@font/overpass"
+                               android:textColor="@color/colorSecondari"
+                               android:textSize="13sp"
+                               android:text="do redator"
+                               />
+                       </LinearLayout>
+
+
+
+                   </android.support.v7.widget.CardView>
+
+               </RelativeLayout>
+
+           </android.support.v7.widget.CardView>
+
+           <TextView
+               android:id="@+id/tvTitleTips"
+               android:layout_width="150dp"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="20dp"
+               android:layout_marginStart="20dp"
+               android:layout_below="@id/cvTipsImage"
+               android:fontFamily="@font/overpass_semibold"
+               android:textColor="@color/colorGrayPage"
+               android:textSize="20sp"
+               android:text="Publicar fotos de viagens"
+               />
+
+           <TextView
+               android:id="@+id/tvTextTips"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginBottom="55dp"
+               android:layout_marginEnd="20dp"
+               android:layout_marginTop="10dp"
+               android:layout_marginStart="20dp"
+               android:layout_below="@id/tvTitleTips"
+               android:fontFamily="@font/overpass_light"
+               android:textColor="@color/colorGray"
+               android:textSize="18sp"
+               android:text="Publicar fotos de viagens ajuda com pessoas em fase de auto descoberta e essas pessoas tambem podem estar em busca de matches do mesmo modelo social, ou melhor dizendo em um momento mais ideal da vida. O processo de descoberta pode ajudar voce usando gatilhos simples como postar uma foto de uma viagem atual qie gistou muito de fazer."
+               />
+       </RelativeLayout>
+   </ScrollView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvCurtir"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="3dp"
+        android:backgroundTint="@color/colorWhite"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|end">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="3dp"
+                app:cardElevation="0dp"
+                android:layout_marginEnd="0dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:background="@drawable/bg_btn">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        app:srcCompat="@drawable/heart_dark"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:fontFamily="@font/overpass"
+                        android:textColor="@color/colorWhite"
+                        android:text="curti a dica"
+                        />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+</RelativeLayout>

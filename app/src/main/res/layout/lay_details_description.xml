@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_details_bottom">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="25dp">
+
+        <RelativeLayout
+            android:id="@+id/relativeDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivHeartLikedUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="11dp"
+                android:src="@drawable/heartin_like" />
+
+            <TextView
+                android:id="@+id/tvDescTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/ivHeartLikedUser"
+                android:fontFamily="@font/overpass_semibold"
+                android:text="descrição"
+                android:textColor="@color/colorGrayPage"
+                android:textSize="19sp" />
+
+            <ImageView
+                android:id="@+id/ivSaveUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:clickable="true"
+                android:focusable="true"
+                app:srcCompat="@drawable/star_save_ic" />
+
+            <ImageView
+                android:id="@+id/ivShareUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="25dp"
+                android:layout_toStartOf="@id/ivSaveUser"
+                android:clickable="true"
+                android:focusable="true"
+                app:srcCompat="@drawable/share_profile_ic" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.borjabravo.readmoretextview.ReadMoreTextView
+                    android:id="@+id/tvDescriptionDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/overpass"
+                    android:textColor="@color/colorGray"
+                    android:textSize="20sp"
+                    app:colorClickableText="@color/colorMain"
+                    app:showTrimExpandedText="true"
+                    app:trimCollapsedText="mostrar mais"
+                    app:trimExpandedText="mostrar menos"
+                    app:trimLength="120"
+                    app:trimMode="trimModeLength" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="0dp"
+                    android:fontFamily="@font/overpass_semibold"
+                    android:text="localização"
+                    android:textColor="@color/colorGrayPage"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/tvCityDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/overpass"
+                    android:text="Goiania"
+                    android:textColor="@color/colorGray"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="0dp"
+                    android:fontFamily="@font/overpass_semibold"
+                    android:text="interesses"
+                    android:textColor="@color/colorGrayPage"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/tvInterest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/overpass"
+                    android:text="jogar futebol, musica e arte"
+                    android:textColor="@color/colorGray"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="0dp"
+                    android:fontFamily="@font/overpass_semibold"
+                    android:text="perfil verificado"
+                    android:textColor="@color/colorGrayPage"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/tvNullVerification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/overpass"
+                    android:text="ainda não verificado."
+                    android:textColor="@color/colorGray"
+                    android:textSize="19sp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/layVerificateDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center|start"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/ivVerificateId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="-4dp"
+                        app:srcCompat="@drawable/google_verified_tw" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvLabelVerificateItem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginBottom="0dp"
+                            android:fontFamily="@font/overpass_semibold"
+                            android:text="google"
+                            android:textColor="@color/colorGrayPage"
+                            android:textSize="19sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/overpass"
+                            android:text="verificada"
+                            android:textColor="@color/colorGray" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layShareUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/shape_lay_idicar"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/overpass"
+                        android:text="indicar para alguem"
+                        android:textColor="@color/colorMain" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layReportUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="70dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/overpass"
+                        android:text="Bloquear/Denunciar"
+                        android:textColor="@color/colorGray" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>

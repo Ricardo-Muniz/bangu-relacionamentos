@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Bangu</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="tlt_trend"></string>
+    <string name="tlt_search_matches"></string>
+    <string name="tlt_bangu">bangu</string>
+    <string name="desc_menu_ic">menu</string>
+
+    <string name="facebook_application_id" translatable="false">416218848988981</string>
+    <string name="facebook_login_protocol_scheme" translatable="false">fb416218848988981</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txt_welcome">Ola, bem vindo, não nos conhecemos ainda, me fala de você.</string>
+    <string name="lbl_homem">Homem</string>
+    <string name="lbl_mulher">Mulher</string>
+    <string name="hint_nome">Seu nome</string>
+    <string name="hint_email">Seu e-mail</string>
+    <string name="hint_senha">Senha</string>
+    <string name="lbl_cadastrar">cadastrar</string>
+    <string name="txt_aviso_nome">Esse vai ser seu nome dentro da comunidade</string>
+    <string name="hint_nascimento">Idade atual</string>
+    <string name="hint_local">Sua localidade</string>
+    <string name="lbl_cadastrar_fcb">entrar com o Facebook</string>
+    <string name="lbl_cadastrar_google">Login do Google</string>
+    <string name="tlt_dialog_finalize">Uma lida rapida</string>
+    <string name="lbl_tentar">Tentar novamente</string>
+    <string name="lbl_change_image">toque para mudar a foto</string>
+    <string name="tlt_editar">editar</string>
+    <string name="lbl_criar_tag">criar uma tag</string>
+    <string name="lbl_entrar">entrar</string>
+    <string name="token_login">685823849158-kplkuuk8pa6tgo4b84lid48ld5v8rc7d.apps.googleusercontent.com</string>
+</resources>

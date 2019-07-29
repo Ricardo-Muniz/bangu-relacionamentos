@@ -1,0 +1,50 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:viewportWidth="200"
+    android:viewportHeight="200"
+    android:width="60.0dp"
+    android:height="60.0dp">
+    <path
+        android:pathData="M0 100.002C0 44.769 44.771 0.001 99.999 0.001C155.229 0.001 200 44.77 200 100.002c0 55.225 -44.771 99.997 -100.001 99.997C44.771 199.999 0 155.228 0 100.002z"
+        android:fillColor="#FFFFFF" />
+    <path
+        android:pathData="M150.805 62.539c-14.027 -14.028 -36.771 -14.028 -50.799 0h-0.012c-14.028 -14.028 -36.772 -14.028 -50.799 0c-14.028 14.028 -12.005 35.006 0 50.799c12.714 16.725 35.928 44.318 50.799 44.318h0.012c14.873 0 38.086 -27.594 50.799 -44.318C162.811 97.545 164.833 76.567 150.805 62.539z"
+        android:fillColor="#E78080" />
+    <path
+        android:pathData="M160.582 56.5L58 135"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2"
+        android:strokeMiterLimit="10" />
+    <path
+        android:pathData="M64.927 137.252L53.95 139.344 57.193 128.529Z"
+        android:fillColor="#E78080"
+        android:strokeColor="#E78080"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeMiterLimit="10" />
+    <path
+        android:pathData="M156.995 65.955L165.661 58.751 164.65 52.694 153.604 61.876Z"
+        android:fillColor="#E78080"
+        android:strokeColor="#E78080"
+        android:strokeWidth="1"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeMiterLimit="10" />
+    <path
+        android:pathData="M150.142 57.722L158.811 50.518 164.577 52.619 153.532 61.8Z"
+        android:fillColor="#E78080"
+        android:strokeColor="#E78080"
+        android:strokeWidth="1"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeMiterLimit="10" />
+    <path
+        android:pathData="M62.777 130.073c0 0 0.952 1.084 1.337 1.518l-4.551 3.503l-1.344 -1.516L62.777 130.073z"
+        android:fillColor="#E78080" />
+    <path
+        android:pathData="M154.458 59.938L150.894 62.628 152.276 64.102 155.708 61.479Z"
+        android:fillColor="#E78080" />
+    <path
+        android:pathData="M105 92.75L109.291 100 65.004 132.584 61.166 128.209 89.75 100Z"
+        android:fillColor="#E78080" />
+</vector>
